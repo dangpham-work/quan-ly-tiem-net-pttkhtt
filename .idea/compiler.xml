@@ -7,10 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="DataBase_Java" />
+        <module name="quan-ly-tiem-net" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="quan-ly-tiem-net" target="21" />
-    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,38 +1,25 @@
 package utils;
 
-import javafx.scene.Scene;
-import javafx.stage.Stage;
-
 /**
- * ThongBaoDialogHelper - Wrapper tiện ích để hiển thị dialog thông báo.
- * Nhận Scene thay vì Stage, tương thích với cách dùng trong controllers.
+ * ThongBaoDialogHelper - Đã được vô hiệu hóa cho phiên bản Web.
+ * Class này trước đây dùng JavaFX Dialog, hiện không còn cần trong Web App.
  */
 public class ThongBaoDialogHelper {
-
     private ThongBaoDialogHelper() {}
 
-    public static void showSuccess(Scene scene, String message) {
-        Stage owner = getStage(scene);
-        gui.dialog.ThongBaoDialog.showSuccess(owner, message);
+    public static void showSuccess(Object scene, String message) {
+        System.out.println("[SUCCESS] " + message);
     }
 
-    public static void showError(Scene scene, String message) {
-        Stage owner = getStage(scene);
-        gui.dialog.ThongBaoDialog.showError(owner, message);
+    public static void showError(Object scene, String message) {
+        System.out.println("[ERROR] " + message);
     }
 
-    public static void showWarning(Scene scene, String message) {
-        Stage owner = getStage(scene);
-        gui.dialog.ThongBaoDialog.showWarning(owner, message);
+    public static void showWarning(Object scene, String message) {
+        System.out.println("[WARNING] " + message);
     }
 
-    public static void showInfo(Scene scene, String message) {
-        Stage owner = getStage(scene);
-        gui.dialog.ThongBaoDialog.showInfo(owner, message);
-    }
-
-    private static Stage getStage(Scene scene) {
-        if (scene == null) return null;
-        return scene.getWindow() instanceof Stage ? (Stage) scene.getWindow() : null;
+    public static void showInfo(Object scene, String message) {
+        System.out.println("[INFO] " + message);
     }
 }
